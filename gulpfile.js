@@ -10,8 +10,9 @@ gulp.paths = {
     appAssetsFolder : path.join(__dirname, config.assets || 'assets'),
     appBuildFolder  : path.join(__dirname, config.buildPah || 'build'),
     themeDestFolder : path.join(__dirname, config.productionPath || '../webpack-build'),
-    themeBuildDestFolder : path.join(__dirname, config.productionBuildPath || '../webpack-build/build')
+    themeBuildDestFolder : path.join(__dirname, config.productionBuildPath || '../webpack-build')
 };
+
 
 
 requireDir('./gulp-tasks', {recurse: true});

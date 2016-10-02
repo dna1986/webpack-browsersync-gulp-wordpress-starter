@@ -11,13 +11,8 @@ module.exports = {
     progress : true,
     entry: {
       app: path.join(__dirname, 'assets/entry.js'),
-      vendor: ["./semantic/dist/semantic.js", "./semantic/dist/semantic.css"],
+      vendor: path.join(__dirname, 'assets/lib.js'),
     },
-    // output: {
-    //   path: path.join(__dirname, "theme/js"),
-    //   filename: "[name].js",
-    //   chunkFilename: "[name]_[chunkhash].js"
-    // },
     output : {
       path: __dirname,
       filename: "bundle.js"
@@ -105,7 +100,7 @@ function getPlugins(){
   if(!PROD) {
     plugins.push(new BrowserSyncPlugin({
       proxy: config.serverURL,
-      files : [__dirname + '/*' ,__dirname + '/build/*']
+      files : [__dirname + '/**']
     }));
   } else {
     plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true}));

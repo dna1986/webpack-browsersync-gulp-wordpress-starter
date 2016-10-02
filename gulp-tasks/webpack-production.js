@@ -10,7 +10,7 @@ gulp.task("webpack:production", function() {
     return gulp.src(path.join(paths.appAssetsFolder, 'entry.js'))
       .pipe(webpack(require(paths.webpackConfig)))
       .pipe(gulp.dest(paths.themeBuildDestFolder))
-      .pipe(function(){
+      .on('end',function(){
         process.env.NODE_ENV = '';
       })
 });
