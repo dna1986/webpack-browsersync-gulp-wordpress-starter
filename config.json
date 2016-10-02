@@ -1,0 +1,16 @@
+{
+  "serverURL" : "localhost/webpack",
+  "ignoreFiles" :  [
+    "config.json",
+    "package.json",
+    "semantic.json",
+    "gulpfile.js",
+    "build",
+    "assets",
+    "gulp-tasks",
+    "node_modules",
+    "semantic",
+    "webpack.config.js",
+    "webpack-production.config.js"
+  ]
+}
